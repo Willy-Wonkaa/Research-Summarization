@@ -36,7 +36,7 @@ def handle_form():
             if not text.strip():
                 print("error: No extractable text in PDF, 400")
 
-            summary_text = model.infer(text)
+            summary_text = model.summarize_article(text)
             print("summary: ", summary_text)
             print(len(summary_text))
 
